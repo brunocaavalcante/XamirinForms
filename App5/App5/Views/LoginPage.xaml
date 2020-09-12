@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="App5.Views.LoginPage">
+    <ContentPage.Content>
+        <StackLayout Spacing="20" Padding="15">
+
+            <Label Text="LOGIN" x:Name="lblLogin" FontSize="Medium" />
+
+            <Entry 
+                    x:Name="txtLogin"
+                    FontSize="Small" />
+
+            <Label Text="SENHA" x:Name="lblSenha" FontSize="Medium" />
+
+            <Entry x:Name="txtSenha" 
+                    FontSize="Small"/>
+
+            <Button Text="LOGIN" x:Name="btnLogin"/>
+
+            <Button Text="CADASTRO"/>
+
+            <Label Text="Esqueci a Senha." 
+                   x:Name="txtEsqSenha"
+                   FontSize="15" 
+                   BackgroundColor="White" 
+                   VerticalTextAlignment="Center" />
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

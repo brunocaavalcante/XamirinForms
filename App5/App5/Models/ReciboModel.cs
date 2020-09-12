@@ -1,0 +1,16 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace App5.Models
+{
+    public class ReciboModel
+    {
+        public Guid Id { get; set; }
+        public string Descricao { get; set; }
+        public DateTime Data { get; set; }
+        public int StatusId { get; set; }
+        public Guid UserId { get; set; }
+        public decimal Valor { get; set; }
+    }
+}

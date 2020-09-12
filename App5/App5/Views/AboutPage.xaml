@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="App5.Views.AboutPage"
+             xmlns:vm="clr-namespace:App5.ViewModels"
+             Title="{Binding Title}">
+
+    <ContentPage.BindingContext>
+        <vm:AboutViewModel />
+    </ContentPage.BindingContext>
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Color x:Key="Primary">#2196F3</Color>
+            <Color x:Key="Accent">#96d1ff</Color>
+            <Color x:Key="LightTextColor">#999999</Color>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*" />
+            <RowDefinition />
+            <RowDefinition Height="120" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+
+        <Button            
+                Text="Cadastro de Despezas"
+                FontAttributes="Bold"
+                FontSize="16"
+                Clicked="Cadastro_ClickedAsync"
+                BackgroundColor="OrangeRed"/>
+
+        <Button Grid.Column="1"               
+                Text="Cadastro de Recibos"
+                FontAttributes="Bold"
+                Clicked="Cadastro_ClickedAsync"
+                FontSize="16"
+                TextColor="White"
+                BackgroundColor="Blue"/>
+
+        <Button Grid.Row="1"     
+                FontAttributes="Bold"
+                FontSize="16"
+                Clicked="Visualizar_Clicked"
+                TextColor="White"
+                Text="Visualizar Despezas"
+                BackgroundColor="Teal"/>
+
+        <Button Grid.Row="1" Grid.Column="1" 
+                FontAttributes="Bold"
+                Clicked="Visualizar_Clicked"
+                FontSize="16"
+                TextColor="Black"
+                Text="Visualizar Recibos"
+                BackgroundColor="Orange"/>
+
+        <Button Grid.Row="2" Grid.ColumnSpan="2"
+                FontAttributes="Bold"
+                Clicked="Relatorio_Clicked"
+                FontSize="16"
+                TextColor="White"
+                Text="Relatórios"
+                BackgroundColor="Black"/>
+       
+    </Grid>
+
+</ContentPage>
